@@ -1,0 +1,21 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+server:
+  port: 8081
+  
+  
+spring:
+  application:
+    name: welcome  # Name of the service being registered
+  boot:
+    admin:
+      client:
+        url: http://localhost:1111/  # URL of the Admin Server
+        connect-timeout: 5000
+        read-timeout: 5000
+#spring.web.client.connection-timeout=5000  # 5 seconds
+#spring.web.client.read-timeout=5000  # 5 seconds
+
